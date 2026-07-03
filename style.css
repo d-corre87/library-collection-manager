@@ -1,0 +1,237 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    margin: 0;
+    padding: 30px;
+}
+
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background-image: url("img/SCC-22_Library.jpg");
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(8px);
+
+    transform: scale(1.05);
+
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(255,255,255,0.35);
+
+    z-index: -1;
+}
+
+
+header {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(4px);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border-top: 4px solid #7a0026;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #7a0026;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 20px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(4px);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border-top: 4px solid #7a0026;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+
+.app {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+    background-color: #7a0026;
+    color: white;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.record-tools button {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.record-form input {
+    margin-bottom: 12px;
+}
+
+.record-form button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.library-card {
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    padding: 25px;
+    border: 2px solid #dddddd;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+    transition: 0.2s ease;
+
+    text-align: center;
+}
+
+#libraryCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.library-card h3 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+    color: #7a0026;
+
+    font-size: 1.3rem;
+}
+
+.library-card p {
+    margin: 6px 0;
+}
+
+.library-card:hover {
+    background-color: #dddddd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.library-card button {
+    margin: 5px;
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.card-icon img {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 10px;
+}
+
+#openLibraryResults {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+    #libraryCards
+    #openLibraryResults {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .app {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    #libraryCards {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    .record-tools button {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .library-card {
+        min-height: auto;
+    }
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.form-buttons button {
+    padding: 10px 20px;
+}
+
+#cancelEditButton {
+    display: none;
+}
+
+
+

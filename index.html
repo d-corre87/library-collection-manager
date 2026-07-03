@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <title>Library Collection Manager</title>
+   </head>
+   <body>
+      <div class="app">
+         <header>
+                <h1>Supreme Court Library Collection Manager</h1>
+                <p>Catalogue and manage library records.</p>
+         </header>
+         <section class="record-form">
+            <h2>Add / Edit Record</h2>
+            <input id="recordTitle" type="text" placeholder="Title">
+            <input id="recordAuthor" type="text" placeholder="Author">
+            <select id="recordFormat">
+               <option value="Book">Book</option>
+               <option value="Journal">Journal</option>
+               <option value="eBook">eBook</option>
+            </select>
+            <input id="recordCallNumber" type="text" placeholder="Call Number">
+            <input id="recordISBN" type="text" placeholder="ISBN">
+            <input id="recordLocation" type="text" placeholder="Location">
+            <button id="addLibraryItemButton">Add Record</button>
+               <div class="form-buttons">
+                  <button id="cancelEditButton">Cancel</button>
+               </div>
+         </section>
+         <section>
+            <h2>Open Library Search</h2>
+            <input id="searchTerm" type="text" placeholder="Search Term">
+            <button id="searchOpenLibraryButton">Search</button>
+            <button id="clearOpenLibraryButton">Clear</button>
+            <div id="openLibraryResults"></div>
+         </section>
+         <section class="record-tools">
+            <h2>Collection Tools</h2>
+            <input id="librarySearchInput" type="text" placeholder="Search title">
+            <button id="searchButton">Search</button>
+            <button id="showAllButton">Show All</button>
+            <button id="recordSortAZ">Sort A-Z</button>
+            <button id="recordSortZA">Sort Z-A</button>
+            <button id="booksOnlyButton">Books Only</button>
+            <button id="journalsOnlyButton">Journals Only</button>
+            <button id="ebooksOnlyButton">eBooks Only</button>
+         </section>
+         <section class="record-section">
+            <h2>Library Collection</h2>
+            <p id="recordCount"></p>
+            <div id="libraryCards"></div>
+         </section>
+         <!-- <div class="library-card"></div> -->
+         <!-- <div class="app"></div> -->
+      </div>
+      <script src="script.js"></script>
+   </body>
+</html>
