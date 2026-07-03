@@ -163,7 +163,7 @@ function renderOpenLibraryResults(apiBooks) {
         let book = apiBooks[i];
 
         results.innerHTML +=
-                "<div class='library-card'>" +
+                "<div class='open-library-result'>" +
                 "<div class='card-icon'>" +
                 "<img src='img/book-open-text.svg' alt='Book'>" +
                 "</div>" +
